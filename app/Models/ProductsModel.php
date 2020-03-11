@@ -59,7 +59,7 @@ class ProductsModel extends Model
         return $this->all()->sortBy('created_at', 0, true)->slice(0, 5);
     }
 
-    public function findClientByGivenClientId(int $productId)
+    public function findProductByGivenProductId(int $productId)
     {
         $query = $this->find($productId);
 
