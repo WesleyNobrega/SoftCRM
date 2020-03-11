@@ -52,8 +52,8 @@ class DealsModel extends Model
     }
 
     public static function getDealsInLatestMonth() {
-        $dealsCount = self::where('created_at', '>=', Carbon::now()->subMonth())->count();
-        $allDeals = self::all()->count();
+        $dealsCount = $this->where('created_at', '>=', Carbon::now()->subMonth())->count();
+        $allDeals = $this->all()->count();
 
         $percentage = ($allDeals / 100) * $dealsCount;
 
