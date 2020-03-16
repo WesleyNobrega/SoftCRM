@@ -38,7 +38,7 @@ class DealsTermsModel extends Model
         return $formatted->format('d M, Y');
     }
 
-    public function getTermsBody(int $termId) : int
+    public function getTermsBody(int $termId) : string
     {
         return $this->where('id', $termId)->get()->last()->body;
     }
